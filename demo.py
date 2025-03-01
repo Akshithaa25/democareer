@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 import pandas as pd
-from fpdf import FPDF
+# from fpdf import FPDF
 
 st.set_page_config(page_title="AI Career Counselor", page_icon="🎯")
 
@@ -29,11 +29,13 @@ if st.button("Save Profile"):
 # Section 2: Resume & Cover Letter Generator
 st.header("📄 Resume & Cover Letter Generator")
 resume_template = f"""
-**Name:** {name}
-**Education:** {education}
-**Experience:** {experience} years
-**Skills:** {skills}
-**Career Goal:** {career_goal}
+Name: {name}
+Education: {education}
+Experience: {experience} years
+Skills: {skills}
+Career Goal: {career_goal}
+Skills: {skills}
+Certifications:{certifications}
 """
 if st.button("Generate Resume"):
     st.text_area("Your AI-Generated Resume:", resume_template, height=150)
